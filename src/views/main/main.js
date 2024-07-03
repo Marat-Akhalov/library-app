@@ -28,7 +28,6 @@ export class MainView extends AbstractView {
     this.app.innerHTML = '';
     this.app.append(main);
     this.renderHeader();
-    this.appState.favorites.push('b');
   }
 
   renderHeader() {
@@ -38,7 +37,7 @@ export class MainView extends AbstractView {
 
   appStateHook(path) {
     if (path === 'favorites') {
-      console.log(path);
+      this.render();
     }
   }
 
